@@ -1,29 +1,31 @@
-# Import my data set
 from sklearn import datasets
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
 from sklearn import tree
 
+# Importing the iris data set
 iris = datasets.load_iris()
 
-# I am going to partition my data into two sets
-# 1/2 for testing and the other half for training
+# Breaking the data set into two, one for training the other for testing
 x = iris.data
 y = iris.target
 
-# Here I am using xtrain and ytrain for my training data
-# and xtest and y test for my test data
-#from sklearn.model_selection import train_test_split
+# x_train and y_train are used for training
+# x_test and y_test is used for testing
+# The data test, testing size is set to .5
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=.5)
-
-# Now I am going to our go to classifier, decision tree
-#from sklearn import tree
+# The first classifier we are using is the decision tree classifier from sklearn
 my_decision_tree_classifier = tree.DecisionTreeClassifier()
 
-# Now I want to train the classifier on my training data
+print("Welcome to the Iris Data Set Classifying Program.")
+print("\nHow it works:\nIt imports the iris data set from sklearn.")
+print("\nData set explanation:\nThe data set is broken down into rows with 4 different values that apply to one specific flower.")
+print("\nData set legend: Row[1st value = sepal lenght(cm), 2nd value = sepal width(cm), 3nd value = petal lenght(cm), 4th value = petal width(cm)")
+
+# Using x_train and y_train to train the decision tree classifier
 my_decision_tree_classifier.fit(x_train, y_train)
 
-# Call predict method to classify our testing data
+# Using .predict to predict our input of x_test
 predictions_from_decision_tree_classifier = my_decision_tree_classifier.predict(x_test)
 
 # Let's print out the predictions
