@@ -24,7 +24,7 @@ my_decision_tree_classifier = tree.DecisionTreeClassifier()
 my_decision_tree_classifier.fit(x_train, y_train)
 
 # Call predict method to classify our testing data
-predictions_from_decision_tree_classifier = my_decision_tree_classifier.predict(x_test, y_test)
+predictions_from_decision_tree_classifier = my_decision_tree_classifier.predict(x_test)
 
 # Let's print out the predictions
 # These correspond to the type of iris predicted
@@ -45,7 +45,7 @@ print(accuracy_score(y_test, predictions_from_decision_tree_classifier))
 ############# implement the KNN ##################
 
 from sklearn.neighbors import KNeighborsClassifier
-my_k_nearest_neighbors_classifier = KNeighborsClassifier
+my_k_nearest_neighbors_classifier = KNeighborsClassifier()
 
 my_k_nearest_neighbors_classifier.fit(x_train, y_train)
 
