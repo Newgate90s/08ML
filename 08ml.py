@@ -28,7 +28,7 @@ print("\nHow the classifiers work: \nDecisionTreeClassifier - It's a class impor
       "\n\nKNeighborsClassifier - This classifier is a type of instance-based learning or non-generalizing learning that is also imported from sklearn."
       "\nIt does not attempt to construct a general internal model, instead it stores instances of the training data. "
       "\nThe classification is computed from a majority vote of the nearest neighbors of each point."
-      "\n Further Info: https://scikit-learn.org/stable/modules/neighbors.html")
+      "\nFurther Info: https://scikit-learn.org/stable/modules/neighbors.html")
 
 
 print("\nData set explanation:\nThe data set is broken down into two parts. "
