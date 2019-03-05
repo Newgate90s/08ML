@@ -18,7 +18,19 @@ x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=.5)
 my_decision_tree_classifier = tree.DecisionTreeClassifier()
 
 print("Welcome to the Iris Data Set Classifying Program.")
-print("\nHow it works:\nIt imports the iris data set from sklearn that has specific values that the classifiers use to learn how to distiguish the flower species.")
+print("\nHow it works:\nIt imports the iris data set from sklearn that has specific values that two classifiers use to learn how to distiguish the flower species."
+      "\nIt then compares the real answers with the predicted answers and gives the user percentage of accuracy")
+print("\nClassifiers used:\nDecisionTreeClassifier\nKNeighborsClassifier")
+print("\nHow the classifiers work: \nDecisionTreeClassifier - It's a class imported from sklearn that is capable of performing binary and multi-class classifications on a data set. "
+      "\nIt takes training data input to learn the patterns in the dataset. "
+      "\nIt then takes takes another input of data to predict on."
+      "\nFurther info: https://scikit-learn.org/stable/modules/tree.html"
+      "\n\nKNeighborsClassifier - This classifier is a type of instance-based learning or non-generalizing learning that is also imported from sklearn."
+      "\nIt does not attempt to construct a general internal model, instead it stores instances of the training data. "
+      "\nThe classification is computed from a majority vote of the nearest neighbors of each point."
+      "\n Further Info: https://scikit-learn.org/stable/modules/neighbors.html")
+
+
 print("\nData set explanation:\nThe data set is broken down into two parts. "
       "\nPart one contain 4 values that belong to a specific flower"
       "\nPart two contains the flower label for those part one values.")
@@ -52,11 +64,11 @@ print(x_test)
 print("="*80)
 
 # Asking user for input to print out the predictions and accuracy of our first classifier, the decision tree classifier from sklearn
-wait = input("Press enter to view results of first classifier")
+wait = input("Press enter to view results of the DecisionTreeClassifier")
 print("="*80)
-print("Classifier 1 results:")
+print("DecisionTreeClassifier results:")
 print(predictions_from_decision_tree_classifier)
-print("\nClassifier 1 accuracy:")
+print("\nDecisionTreeClassifier1 accuracy:")
 print(accuracy_score(y_test, predictions_from_decision_tree_classifier))
 print("="*80)
 
@@ -72,11 +84,11 @@ my_k_nearest_neighbors_classifier.fit(x_train, y_train)
 predictions_from_KNeighborsClassifier = my_k_nearest_neighbors_classifier.predict(x_test)
 
 # Asking user for input to pint out the predictions and accuracy of our second classifier, the k neighbors classifier from sklearn
-wait = input("Press enter to view results of first classifier")
+wait = input("Press enter to view results of the KNeighborsClassifier")
 print("="*80)
-print("Classifier 2 results:")
+print("KNeighborsClassifier results:")
 print(predictions_from_KNeighborsClassifier)
-print("\nClassifier 2 accuracy:")
+print("\nKNeighborsClassifier accuracy:")
 print(accuracy_score(y_test, predictions_from_KNeighborsClassifier))
 print("="*80)
 
